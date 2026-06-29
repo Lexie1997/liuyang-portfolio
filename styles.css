@@ -361,12 +361,32 @@ a {
   background: #fff;
 }
 
-.contact a {
-  display: inline-flex;
-  margin-top: 24px;
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.contact-item {
+  display: grid;
+  gap: 8px;
+  padding: 18px;
+  border: 1px solid rgba(18, 20, 23, 0.1);
+  border-radius: 8px;
+  background: #f7f8f6;
+}
+
+.contact-item span {
+  color: #66706e;
+  font-size: 14px;
+}
+
+.contact-item strong {
   color: #0f766e;
-  font-weight: 800;
-  font-size: 20px;
+  font-size: 18px;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
 }
 
 @media (max-width: 960px) {
@@ -393,7 +413,8 @@ a {
 
   .stats,
   .video-grid,
-  .strategy-list {
+  .strategy-list,
+  .contact-grid {
     grid-template-columns: 1fr;
   }
 
